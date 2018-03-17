@@ -20,9 +20,7 @@ namespace uniqueanator
                 var extension = fileName.Substring(extensionStart, fileName.Length - extensionStart);
                 var guid = Guid.NewGuid();
                 Console.WriteLine($"Moving file {fileName} to File_{guid}{extension}" );
-                File.Move(fileName, $"{args[0]}\\File_{guid}{extension}");
-                Console.WriteLine($"Deleting file {fileName}");
-                File.Delete(fileName);
+                File.Move(fileName, $"{args[0]}\\File_{guid}{extension}");                
                 Console.WriteLine($"Finished with file {fileName}");
             }
             Console.WriteLine("Done");
